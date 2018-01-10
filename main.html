@@ -10,6 +10,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+  
 </head>
 <body>
 
@@ -37,10 +40,54 @@
 	</div>
   </div>
 </nav>
+<div class="container-fluid">
+  <div class="row">
+   <div class="col-sm-2">
+    </div>
+	
+    <div class="col-sm-4">
+	<img class="red-logo" src="https://instagram.fdel1-1.fna.fbcdn.net/t51.2885-19/s150x150/25023104_220129005197353_5939818605045612544_n.jpg" alt="Adobe">
+    </div>
+	 <div class="col-sm-3">
+	 <section class="_o6mpc">
+	 <div class="_ienqf">
+	 <h1 class="_rf3jb notranslate" title="adobe">adobe</h1>
+	 <span class="_i2ibz _8scx2 coreSpriteVerifiedBadge" title="Verified">Verified</span>
+	 <span class="_ncrqg _cx7xo">
+	 <span class="_lyv4q _ov9ai"><button class="_qv64e _gexxb _r9b8f _njrw0">Follow</button></span>
+	 <span class="_hu394 _ov9ai"><button class="_qv64e _gexxb _4tgw8 _njrw0"><div class="_6rswy">
+	 <div class="_quyb3 coreSpriteDropdownArrowWhite">
+	 </div>
+	 </div>
+	 </button>
+	 </span>
+	 </span>
+	 <div class="_1ekh3">
+	 <button class="_68sh8 coreSpriteOptionsEllipsis _8scx2">Options</button>
+	 </div>
+	 </div>
+	 <ul class="_h9luf">
+	 <li class="_bnq48"><span class="_t98z6">
+	 <span class="_fd86t">1,432</span> posts</span></li>
+	 <li class="_bnq48"><a class="_t98z6" href="/adobe/followers/">
+	 <span class="_fd86t" title="587,342">587k</span> followers</a></li>
+	 <li class="_bnq48"><a class="_t98z6" href="/adobe/following/">
+	 <span class="_fd86t">692</span> following</a></li></ul>
+	 <div class="_tb97a"><h1 class="_kc4z2">Adobe</h1> 
+	 <span><span>We're kicking off the new year on a clean slate and embracing the art of simplifying. Share your minimalistic work with </span>
+	 <a href="/explore/tags/adobe_lessismore/">#Adobe_LessIsMore</a><span>.</span></span> </div></section>
+    </div>
+    <div class="col-sm-3">
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+
 <div class="row">
 <div class="col-sm-4">
 	<section id="content"></section>
 	</div>
+</div>
 </div>
 
 </body>
@@ -49,6 +96,15 @@
 body,html{
 background-color:white;
 overflow-x:hidden;
+}
+.red-logo{
+border-radius:50%;
+margin:8%;
+
+}
+nav
+{
+position:fixed;
 }
 
 #insta {
@@ -85,7 +141,7 @@ height:12vh;
 }
 #content {
   position: relative;
-  width: 100vw;
+  width: 83vw;
   background-color:white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +159,7 @@ height:12vh;
   background: white;
   display: block;
   overflow: hidden;
-    margin: 0.5%;
+    margin: 1.5%;
 
 }
 #content .post .image {
@@ -169,7 +225,7 @@ $(function(){
   var accessToken = '273700138.f359f2c.f6d5dd3e37704cb8b976331d56706931';
   $.getJSON('https://api.instagram.com/v1/users/self/media/recent/?access_token='+accessToken+'&callback=?',function (insta) {
     $.each(insta.data,function (photos,src) {
-      if ( photos === 20 ) { return false; }
+      if ( photos === 18 ) { return false; }
       $('<a href="'+src.link+'" class="post">'+
         '<div class="image" style="background-image:url('+src.images.standard_resolution.url+');"></div>'+
         '<ul>'+
