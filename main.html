@@ -37,16 +37,18 @@
 	</div>
   </div>
 </nav>
-	
-<div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+<div class="row">
+<div class="col-sm-4">
+	<section id="content"></section>
+	</div>
 </div>
 
 </body>
 </html>
 <style>
-
+body,html{
+background-color:white;
+}
 
 #insta {
   background: radial-gradient(circle at 30% 107%, black 10%, black 5%, black 45%, black 60%, black 90%);
@@ -83,6 +85,7 @@ height:12vh;
 #content {
   position: relative;
   width: 100vw;
+  background-color:white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +112,7 @@ height:12vh;
   background-size: cover;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
+  margin:8%;
 }
 #content .post ul {
   position: absolute;
@@ -127,12 +131,13 @@ height:12vh;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
   color: #FFF;
+
 }
 #content .post ul li {
   text-align: center;
   line-height: 50px;
 }
-#content .post:hover .image {
+/*#content .post:hover .image {
   opacity: .5;
   -webkit-transform: scale(1.15) translate3d(0, 0, 0);
           transform: scale(1.15) translate3d(0, 0, 0);
@@ -140,7 +145,7 @@ height:12vh;
 #content .post:hover ul {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
+}*/
 .button{
     border: none;
     padding: 15px 32px;
